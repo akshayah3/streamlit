@@ -754,28 +754,6 @@ if st.session_state.chart_generated and 'chart_data' in st.session_state:
             with col3:
                 st.write(f"**{pratyantardasha} (PD):** {', '.join([f'H{h}' for h in sorted(pratyantar_house_nums)])}")
 
-    # Footer
-    st.markdown("---")
-    st.markdown("*Generated using Swiss Ephemeris and traditional Vedic astrology calculations*")
-
-else:
-    st.info("👈 Enter your birth details in the sidebar and click 'Generate Chart' to begin!")
-    
-    # Example/demo section
-    with st.expander("ℹ️ How to use this calculator"):
-        st.markdown("""
-        **Step 1:** Enter your birth details in the sidebar:
-        - Birth date and time
-        - Birth location (latitude/longitude)
-        - Timezone offset from UTC
-        
-        **Step 2:** Click "Generate Chart" to calculate your Vedic astrology chart
-        
-        **Features included:**
-        - 🪐 Planetary analysis with comprehensive relationships
-        - 🕐 Dasha period analysis for timing predictions
-        - 🎯 Planetary aspects with strength calculations
-        - 🔗 House activation priority system
-        
-        **Note:** This calculator uses the traditional Lahiri ayanamsa and Swiss Ephemeris for accurate calculations.
-        """)
+        # Footer
+        st.markdown("---")
+        st.markdown("*Generated using Swiss Ephemeris and traditional Vedic astrology calculations*")
