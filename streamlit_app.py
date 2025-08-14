@@ -19,12 +19,15 @@ st.sidebar.header("Birth Details")
 # Date and time inputs
 birth_date = st.sidebar.date_input(
     "Birth Date",
-    value=datetime(1975, 8, 11)
+    value=datetime(1975, 8, 11),
+    min_value=datetime(1800, 1, 1),
+    max_value=datetime(2100, 12, 31)
 )
 
 birth_time = st.sidebar.time_input(
     "Birth Time",
-    value=datetime.strptime("19:10", "%H:%M").time()
+    value=datetime.strptime("19:10", "%H:%M").time(),
+    step=60  # 60 seconds = 1 minute intervals
 )
 
 # Location inputs
